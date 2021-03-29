@@ -7,8 +7,8 @@ const useIpcListener = (channel, handler) => {
     useEffect(() => {
         savedHandler.current = handler;
     }, [handler]);
-    useEffect(
-        () => {
+    useEffect(() => {
+            if (!ipcRenderer) throw new Error('electron-use-ipc-listener: Use useIpcListener in the Renderer process only');
             const eventHandler = (event, ...rest) => savedHandler.current(event, ...rest);
             ipcRenderer.on(channel, eventHandler);
             return () => {
