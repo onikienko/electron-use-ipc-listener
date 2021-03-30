@@ -9,8 +9,8 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "release": "npm run build && np --no-yarn --no-cleanup --no-2fa",
-    "preview": "npm run build && np --no-yarn --no-cleanup --no-2fa --preview",
+    "release": "npm run build && np --no-yarn --no-cleanup --no-2fa --no-tests",
+    "preview": "npm run build && np --no-yarn --no-cleanup --no-2fa --preview --no-tests",
     "test": "jest"
   },
   "repository": {
