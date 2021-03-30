@@ -2,6 +2,11 @@ import {ipcRenderer} from 'electron';
 import {useEffect, useRef} from 'react';
 
 
+/**
+ * Custom React Hook that listen to channel, when a new message arrives listener would be called with handler(event, args...).
+ * @param {string} channel - The name of the channel being listened for
+ * @param {function} handler - The handler function
+ */
 const useIpcListener = (channel, handler) => {
     const savedHandler = useRef();
     useEffect(() => {
