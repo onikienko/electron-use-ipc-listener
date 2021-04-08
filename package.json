@@ -34,8 +34,8 @@
   },
   "homepage": "https://github.com/onikienko/electron-use-ipc-listener",
   "peerDependencies": {
-    "react": "^16.9.0 || ^17.0.0",
-    "electron": ">=7"
+    "electron": "*",
+    "react": "^16.9.0 || ^17.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.13",
