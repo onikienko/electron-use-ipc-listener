@@ -1,6 +1,6 @@
 {
   "name": "electron-use-ipc-listener",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0",
   "description": "React Hook for Electron that simplifies IPC routine",
   "source": "src/index.js",
   "main": "dist/index.js",
