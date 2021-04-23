@@ -3,15 +3,15 @@ import {useEffect, useRef} from 'react';
 
 
 /**
- * Custom React Hook that listen to channel, when a new message arrives listener would be called with handler(event, args...).
- * @param {string} channel - The name of the channel being listened for
- * @param {function} handler - The handler function
+ * Custom React Hook that listen to channel. When a new message arrives `listener` would be called with `listener(event, args...)`
+ * @param {string} channel - The name of the channel
+ * @param {Function} listener - The handler function
  */
-const useIpcListener = (channel, handler) => {
+const useIpcListener = (channel, listener) => {
     const savedHandler = useRef();
     useEffect(() => {
-        savedHandler.current = handler;
-    }, [handler]);
+        savedHandler.current = listener;
+    }, [listener]);
     useEffect(() => {
             if (!ipcRenderer) throw new Error('electron-use-ipc-listener: Use useIpcListener in the Renderer process only');
             const eventHandler = (event, ...rest) => savedHandler.current(event, ...rest);
