@@ -1,5 +1,7 @@
 # electron-use-ipc-listener
 
+### Russian invaders must die. Glory to Ukraine.
+
 React Hook for Electron that simplifies IPC routine.
 
 For usage in Renderer process.
